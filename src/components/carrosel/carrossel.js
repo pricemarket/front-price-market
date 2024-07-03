@@ -1,28 +1,19 @@
 import React, { useRef } from "react";
-import { Container, ImageNav, Navegador } from "./carrosselStyle";
-import mercado from "../assets/mercado.avif";
-import prod1 from "../assets/prod1.jpeg";
-import prod2 from "../assets/prod2.png";
+import styled from "styled-components";
+import mercado from "../../assets/mercado.avif";
+import prod1 from "../../assets/prod1.jpeg";
+import prod2 from "../../assets/prod2.png";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import '../styles.css';
+import '../../styles.css';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-export default function AppMain() {
-    return(
-        <Container>
-            <Navegador></Navegador>
-            <SwiperNav></SwiperNav>
-        </Container>
-    )
-}
-
-const SwiperNav = () => {
+export const SwiperNav = () => {
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
     
@@ -68,3 +59,8 @@ const SwiperNav = () => {
         </Swiper>
     );
 }
+
+const ImageNav = styled.img`
+  position: absolute;
+  z-index: -1;
+`;

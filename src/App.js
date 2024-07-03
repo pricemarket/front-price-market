@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import AppMain from './Carrosel/carrossel';
+import AppMain from './components';
 import React from 'react';
 
 function App() {
