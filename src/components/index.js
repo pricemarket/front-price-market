@@ -7,6 +7,7 @@ export default function AppMain() {
     return(
         <Container>
             <NavegadorMain></NavegadorMain>
+            <LinhaNav></LinhaNav>
             <SwiperNav></SwiperNav>
         </Container>
     )
@@ -21,4 +22,12 @@ export const Container = styled.div`
   position: relative;
   overflow: hidden;
   flex-direction: column;
+`;
+
+export const LinhaNav = styled.div`
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
 `;
