@@ -1,7 +1,7 @@
 import React from "react";
 import { SwiperNav } from "../carrosel/carrossel";
 import NavegadorMain from "../../Navegador";
-import { Container, LinhaNav, Title } from "./homeStyle";
+import { Container, Title } from "./homeStyle";
 
 export default function AppMain() {
     return(
