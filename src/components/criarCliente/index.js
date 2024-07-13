@@ -36,7 +36,7 @@ const ClienteForm = () => {
     };
 
     try {
-      const response = await axios.post('https://projetoinicialusr.onrender.com/v1/users/criar-cliente', data, {
+      const response = await axios.post('https://gerenciador-tarefas-yuip.onrender.com/v1/users/criar-cliente', data, {
         headers: {
           'Content-Type': 'application/json'
         }

@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Login from "../components/login";
-import AppMain from '../components';
+import AppMain from '../components/home';
 import ClienteForm from '../components/criarCliente';
 
 export default function RoutesNav() {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Container, Form, Input, Button, BoldLink, Message } from './LoginStyle';
+import { jwtDecode } from 'jwt-decode';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -12,12 +13,13 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://projetoinicialusr.onrender.com/v1/auth/login', { email, password }, {
+      const response = await axios.post('https://gerenciador-tarefas-yuip.onrender.com/v1/auth/login', { email, password }, {
         headers: {
           'Content-Type': 'application/json'
         }
       });
-
+      const token = response.data;
+      localStorage.setItem('accessToken', token);
       if (response.data) {
         setMessage('Login bem-sucedido!');
         setTimeout(() => {
